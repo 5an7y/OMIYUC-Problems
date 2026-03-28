@@ -1,0 +1,13 @@
+.DS_Store
+.vscode/
+local_config.json
+
+# OmegaUp problem packages (generated artifacts, upload directly to OmegaUp)
+*.zip
+*.ZIP
+
+# Compiled executables
+*.exe
+
+# Generated test case inputs (can be regenerated with OmegaUp-Toolkit's GenerateCases.py)
+**/cases/*.in

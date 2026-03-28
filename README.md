@@ -1,44 +1,40 @@
-# Competitive Programming Problem Set
+# OMIYUC-Problems
 
-![GitHub](https://img.shields.io/github/license/5an7y/ProgrammingPS)
-![GitHub top language](https://img.shields.io/github/languages/top/5an7y/ProgrammingPS)
-![GitHub last commit](https://img.shields.io/github/last-commit/5an7y/ProgrammingPS)
-![GitHub repo size](https://img.shields.io/github/repo-size/5an7y/ProgrammingPS)
+Banco de problemas de programación competitiva de la **Olimpiada Mexicana de Informática en Yucatán (OMI Yucatán)**.
 
-Un repositorio creado para los problemas de programación competitiva que he creado para la pagina de [OmegaUp](https://omegaup.com/). Existen problemas de diversos temas, algunos problemas son inspirados en otros problemas de otras paginas. A su vez estos problemas son creados para concursos estatales o entrenamientos. Mi objetivo es hacer de OmegaUp una página de mayor nivel y darle oportunidad aquellas personas que no entienden fluido el idioma inglés de mejorarse con está herramienta.
+Los problemas están organizados por fases temáticas y se publican en [OmegaUp](https://omegaup.com). Creados y mantenidos por [5an7y](https://omegaup.com/profile/5an7y/), entrenador de OMI Yucatán.
+
+## Prerrequisitos
+
+Para crear y probar problemas, clona el toolkit:
+
+```bash
+git clone https://github.com/5an7y/OmegaUp-Toolkit.git
+```
+
+Requisitos: Python 3, g++ (con soporte C++20).
 
 ## Estructura
 
-Los problemas están en español (posiblemente se suban luego en inglés). Cada problema cuenta con 3 carpetas y cada carpeta cuenta con la siguiente estructura:
+```
+01_IntroduccionProgramacion/    Condicionales, Ciclos, Arreglos, Strings
+02_PrimerosPasosAlgoritmia/     Matemáticas, Greedy, Técnicas Básicas
+03_AlgoritmosEstructurasDatos/  Estructuras, Teoría de Números, STL, Técnicas II, Ordenamientos
+04_ProgramacionCompetitiva/     Backtracking, Interactivos, Grafos, DP
+05_TemasEspecializados/         Combinatoria, Dijkstra, Segment Tree, Árboles, D&C
+_Recursos/                      Editoriales y materiales de concursos pasados
+CheatSheets/                    Guías de referencia
+```
 
-- Cases: Aquí se encuentran los casos que se subieron a la plataforma en los cuales los códigos son evaluados (en casos de errores favor de comentarlo). Los archivos `.in` son las entradas mientras que los `.out` la salida esperada.
-- Solutions: En este apartado se encuentra la solución al problema. Se puede encontrar el `es.markdown` en donde se redacta la solución en formato markdown, la cuál es la que utiliza OmegaUp para sus problemas. Podrás ver que el archivo aparecen con aparentes errores al poner $$. El texto que esta entre $$ se renderiza como `latex` en OmegaUp.
-- Statements: Es la redacción del problema en formato markdown y es tal como aparece en OmegaUp.
+## Uso
 
-En algunos casos existe un archivo llamado `ProblemMarker.cpp` o `casesGenerator.cpp`, este es el código usado para generar los casos del problema. Al igual se tiene un markdown donde se describe un poco el problema (temas, links, inspiración, uso, etc.)
+```bash
+# Generar casos de prueba
+python /ruta/OmegaUp-Toolkit/GenerateCases.py 04_ProgramacionCompetitiva/04_DP/LIS --use_solution
 
-## Creador
+# Probar soluciones
+python /ruta/OmegaUp-Toolkit/TestCases.py 04_ProgramacionCompetitiva/04_DP/LIS
 
-Puedes checar mi usuario en OmegaUp, [5an7y](https://omegaup.com/profile/5an7y/). Soy entrenador y ex-olímpico de la Olimpiada Mexicana de Informática en el estado de Yucatán. Actualmente soy el entrenador del estado y he competido en la ICPC nacional 2020.
-
-## Problemas
-
-Los problemas del repositorio ordenados por temas:
-
-- Implementación:
-  - [Thanos Sort](../tree/master/ThanosSort)
-  - [Lamparas](../tree/master/Lamparas)
-
-- Ordenamientos:
-  - [Mejorando la empresa](../tree/master/../../ProgrammingPS/MejorandoLaEmpresa) 
-
-- Ideas: 
-(Problemas que son resolvibles con conceptos básicos, pero requieren de una idea no trivial)
-  - [Coronavirus](../tree/master/Coronavirus)
-
-- Estructura de datos:
-  - Listas Enlazadas
-    - [Alianza de villanos](../tree/master/AlianzaDeVillanos)
-
-- Programación Dinámica:
-  - [SubsecuenciaCrecienteMásLarga](../tree/master/LIS)
+# Crear un problema nuevo
+python /ruta/OmegaUp-Toolkit/CreateProblem.py 01_IntroduccionProgramacion/02_Ciclos/MiProblema
+```
