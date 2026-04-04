@@ -1,0 +1,10 @@
+alias: CursoOMIYucL26
+title: Else If
+source: OMI Yucatán
+visibility: private
+type: lectura
+validator: token
+time_limit: 1000
+memory_limit: 256
+overall_wall_time_limit: 60000
+level: problemLevelBasicIntroductionToProgramming
