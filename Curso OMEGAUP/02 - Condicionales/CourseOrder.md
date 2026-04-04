@@ -14,8 +14,8 @@ Lecturas y lecciones-problema intercaladas, en orden.
 |---|----------|-------------|
 | 1 | **L18 - Condicionales** | Introduce el `if`: la primera herramienta para que el programa tome decisiones. Ejemplo del cine (edad >= 18). |
 | 2 | **L19 - Condiciones con Enteros** | Operadores de comparación (`>`, `<`, `==`, `>=`, `<=`, `!=`). Abre con el error `=` vs `==` como hook. |
-| 3 | **LECCIÓN 06 - Comparaciones** | Dados a y b, imprimir todos los mensajes de comparación que apliquen. Practica los 6 operadores con ifs independientes. |
 | 4 | **L20 - Estilo Indentacion** | La indentación no es decoración — es cómo encuentras tus errores. |
+| 3 | **LECCIÓN 06 - Comparaciones** | Dados a y b, imprimir todos los mensajes de comparación que apliquen. Practica los 6 operadores con ifs independientes. |
 | 5 | **L21 - El Else** | Por qué dos `if` separados pueden fallar. `else` garantiza que solo uno de los dos bloques se ejecute. |
 | 6 | **LECCIÓN 07 - Nivel Especial** | Videojuego: si vida >= 500 se reduce a la mitad, si no se duplica. Primer if/else real. |
 | 7 | **L22 - If Anidados** | Un `if` dentro de otro para verificar condiciones en secuencia. Motivación: habilidades por tipo y nivel de personaje. |
@@ -23,7 +23,7 @@ Lecturas y lecciones-problema intercaladas, en orden.
 | 9 | **L23 - Operadores Logicos** | `&&`, `||`, `!` para combinar condiciones. Motivación: montaña rusa (edad Y altura). Tablas de verdad y jerarquía. |
 | 10 | **LECCIÓN 09 - Aprobado** | Alumno aprueba si cumple alguna de dos condiciones. Si no, +3 puntos y se reevalúa. Usa operadores lógicos. |
 | 11 | **L24 - Variables Booleanas** | Tipo `bool`: recordar si algo ocurrió. Útil cuando tienes varios ifs independientes con efectos secundarios. |
-| 12 | **LECCIÓN 10 - Calculando Comparaciones** | Dada opción O (1-4), calcular mayor/menor entre pares. Practica switch implícito con else if. |
+| 12 | **LECCIÓN 10 - Logros del Partido** | Dados goles a favor y en contra, imprimir los logros desbloqueados y mensaje final. Requiere `bool` — no se puede resolver limpiamente con solo `||`. |
 | 13 | **L25 - Llaves Opcionales** | Código ajeno a veces omite llaves. Te mostramos la trampa para que puedas reconocerla. |
 | 14 | **L26 - Else If** | La forma estándar de manejar múltiples casos mutuamente excluyentes. Ejemplo con rangos de temperatura. |
 

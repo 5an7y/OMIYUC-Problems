@@ -1,7 +1,7 @@
 Esta es una **lectura** diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.
 # Variables Booleanas
 
-Ya conoces `int` para números enteros y `string` para texto. Ahora conocerás un tipo de variable diseñada para responder una sola pregunta: ¿sí o no?
+Ya conoces `int` para números enteros. Ahora conocerás un tipo de variable diseñada para responder una sola pregunta: ¿sí o no?
 
 Las variables de tipo `bool` solo pueden tener dos valores: `true` (verdadero) o `false` (falso). Se declaran igual que cualquier variable:
 

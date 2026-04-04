@@ -1,4 +1,5 @@
 Esta es una **lectura** diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.
+
 # Estilo: Indentación
 
 No hay una única forma de escribir código, pero sí hay buenas prácticas que casi todos los programadores siguen. La más importante es la **indentación**: agregar espacios (o un tab) al inicio de cada línea que está dentro de un bloque `{}`.
