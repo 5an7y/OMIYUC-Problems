@@ -12,16 +12,16 @@ Lecturas y lecciones-problema intercaladas, en orden.
 
 | # | Elemento | Descripción |
 |---|----------|-------------|
-| 1 | **L27 - Ciclos** | El `while`: repetir mientras se cumpla una condición. Motivación: carta mágica de Yu-Gi-Oh. Ciclos infinitos. |
-| 2 | **LECCIÓN 11 - Ciclos** | Yu-Gi-Oh: duplicar vida hasta superar al rival. Primer problema con `while`. |
+| 1 | **L27 - Ciclos** | El `while`: repetir mientras se cumpla una condición. Motivación: rebote de pelota. Ciclos infinitos. |
+| 2 | **LECCIÓN 11 - Yu-Gi-Oh** | Duplicar vida hasta superar al rival. Primer problema con `while`. |
 | 3 | **L28 - Ciclos Controlados** | El `for`: repetir N veces. Variable contadora, localidad de variables. |
-| 4 | **LECCIÓN 12 - Ciclos Controlados** | Imprimir todos los números de 0 a N-1. |
+| 4 | **LECCIÓN 12 - Del Cero al N** | Imprimir todos los números de 0 a N-1. |
 | 5 | **L29 - Pérdida de Memoria** | Acumuladores, mínimo/máximo: resolver sin guardar toda la lista. |
-| 6 | **LECCIÓN 13 - Pérdida de Memoria** | Contar cuántos números de una lista son menores a K. |
+| 6 | **LECCIÓN 13 - El Filtro** | Contar cuántos números de una lista son menores a K. |
 | 7 | **L30 - Ciclos Anidados** | Un ciclo dentro de otro. Rectángulo de asteriscos. Nombres i/j. |
-| 8 | **LECCIÓN 14 - Ciclos Anidados** | Media pirámide de asteriscos: ciclo exterior controla filas, interior usa i. |
+| 8 | **LECCIÓN 14 - La Pirámide** | Media pirámide de asteriscos: ciclo exterior controla filas, interior usa i. |
 | 9 | **L31 - Más de Ciclos** | El optimizador `ios_base::sync_with_stdio(0); cin.tie(0)`. Plantilla definitiva. |
-| 10 | **LECCIÓN 15 - Más de Ciclos** | Valor absoluto de N números: salida múltiple con el optimizador. |
+| 10 | **LECCIÓN 15 - Sin Signo** | Valor absoluto de N números: salida múltiple con el optimizador. |
 | 11 | **L32 - Atajos de Ciclos** | While sin llaves, for sin llaves, `while(N--)`. Reconocerlos en código ajeno. |
 
 ---

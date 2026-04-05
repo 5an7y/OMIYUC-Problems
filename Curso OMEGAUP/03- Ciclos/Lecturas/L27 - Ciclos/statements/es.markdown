@@ -2,11 +2,13 @@
 
 # Motivación
 
-Todos tus programas hasta ahora hacen cada instrucción exactamente una vez. Pero ¿qué pasa cuando necesitas repetir algo indefinidamente?
+Todos tus programas hasta ahora hacen cada instrucción exactamente una vez. Pero ¿qué pasa cuando necesitas repetir algo un número desconocido de veces?
 
-Imagina un juego donde tienes $a$ puntos de vida y tu oponente $b$. Sacas una carta que duplica tu vida **mientras** sea menor a la del contrincante. Si tienes $5$ y él tiene $22$: duplicas a $10$, sigues con menos, duplicas a $20$, sigues con menos, duplicas a $40$. Ya le ganas.
+Piensa en el siguiente problema: se deja caer una pelota desde una altura de $H$ centímetros. Cada vez que rebota, la pelota sube exactamente la mitad de la altura que tenía. Entonces si la sueltas desde $100$ cm: el primer rebote llega a $50$ cm, el segundo a $25$ cm, el tercero a $12$ cm, el cuarto a $6$ cm, el quinto a $3$ cm, el sexto a $1$ cm, el séptimo a $0$ cm — ya no llega a 1 cm.
 
-¿Cómo programas eso? No puedes escribir "duplicar" tres veces fijo — no sabes cuántas veces necesitarás. Necesitas algo que repita **mientras** se cumpla una condición.
+¿Cuántos rebotes dio antes de que la altura fuera $0$ cm?
+
+El problema es que la respuesta depende de $H$. Si $H = 100$ son 7 rebotes. Si $H = 1000$ son 10. No puedes escribir el código "a mano" porque no sabes cuántas veces repetirlo. Necesitas algo que se repita **mientras** la altura siga siendo mayor o igual a $1$.
 
 # While
 
@@ -18,25 +20,29 @@ while (condicion) {
 }
 ```
 
-La condición es igual a la de un `if` — puede usar `>`, `<`, `==`, `&&`, `||`, etc. El bloque se ejecuta, luego se vuelve a verificar la condición. Si sigue siendo verdadera, se vuelve a ejecutar. Cuando deja de cumplirse, el programa sigue adelante.
+La condición funciona igual que en un `if`. El bloque se ejecuta, luego se vuelve a verificar la condición. Si sigue siendo verdadera, se vuelve a ejecutar. Cuando deja de cumplirse, el programa continúa.
 
-Ejemplo: duplicar vida hasta superar al rival.
+Así quedaría el programa del rebote:
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int a, b;
+int H, rebotes;
 
 int main() {
-    cin >> a >> b;
-    while (a <= b) {
-        a *= 2;
+    cin >> H;
+    rebotes = 0;
+    while (H >= 1) {
+        H /= 2;
+        rebotes++;
     }
-    cout << a;
+    cout << rebotes;
     return 0;
 }
 ```
+
+Para $H = 100$: el ciclo divide $H$ entre $2$ y cuenta un rebote en cada vuelta — $100 \to 50 \to 25 \to 12 \to 6 \to 3 \to 1 \to 0$. Cuando $H$ llega a $0$ ya no cumple `H >= 1` y el ciclo termina. Resultado: $7$ rebotes.
 
 Nota importante: la condición se verifica al **inicio** de cada vuelta. Si en medio de la vuelta la condición deja de cumplirse, el ciclo no se detiene ahí — termina la vuelta completa y luego verifica de nuevo.
 
@@ -52,4 +58,4 @@ while (a <= 10) {
 
 Aquí estamos modificando `b` pero verificando `a`. Como `a` nunca cambia, el ciclo corre para siempre — tu programa se **cicló**.
 
-Si al probar tu código ves que tarda demasiado sin dar respuesta, probablemente se cicló. Cierra la consola y revisa que la variable que modificas dentro del ciclo sea la misma que estás verificando en la condición.
+Si al probar tu código ves que tarda demasiado sin dar respuesta, probablemente se cicló. Detén el programa y revisa que la variable que modificas dentro del ciclo sea la misma que estás verificando en la condición.
