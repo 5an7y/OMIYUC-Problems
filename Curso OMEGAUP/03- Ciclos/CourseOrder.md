@@ -24,8 +24,7 @@ Lecturas y lecciones-problema intercaladas, en orden.
 | 10 | **LECCIÓN 15 - Sin Signo** | Árbitro de fútbol: valor absoluto de N diferencias de goles. Aplica patrón de L31. |
 | 11 | **L32 - Ciclos Anidados** | Un ciclo dentro de otro. Rectángulo de asteriscos. Nombres i/j. Triángulo. |
 | 12 | **LECCIÓN 16 - La Tabla** | Tabla de multiplicar NxN: ciclo exterior controla fila i, interior calcula i×j. |
-| 13 | **L33 - Más de Ciclos** | El optimizador `ios_base::sync_with_stdio(0); cin.tie(0)`. Plantilla definitiva. |
-| 14 | **L34 - Ciclos sin llaves** | While y for sin llaves. Reconocerlos en código ajeno. |
+| 13 | **L33 - Ciclos sin llaves** | While y for sin llaves. Reconocerlos en código ajeno. |
 
 ---
 
