@@ -1,0 +1,65 @@
+*Esta es una* ***lectura*** *diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.*
+
+# Ciclos dentro de ciclos
+
+Así como puedes poner un `if` dentro de otro `if`, puedes poner un ciclo dentro de otro ciclo. Esto es útil cuando necesitas hacer algo en dos dimensiones — como dibujar un rectángulo.
+
+Nos dan $N$ y $M$ y debemos imprimir un rectángulo de $N$ filas con $M$ asteriscos cada una:
+
+```
+***
+***
+***
+***
+```
+
+# Anidación
+
+La idea: un ciclo exterior que repite $N$ veces "imprimir una fila completa", y dentro, un ciclo interior que imprime $M$ asteriscos seguidos.
+
+```cpp
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        cout << "*";
+    }
+    cout << '\n';
+}
+```
+
+El `cout << '\n'` está fuera del ciclo interior pero dentro del exterior — así imprime el salto de línea al terminar cada fila.
+
+# Nombres de variables en ciclos anidados
+
+Observa que el ciclo interior usa `j`, no `i`. Esto es obligatorio. La variable `i` fue declarada en el `for` exterior y sigue existiendo dentro — si declararas otra `i` en el interior habría dos variables con el mismo nombre, lo que es un error.
+
+La convención es usar `i` para el ciclo exterior, `j` para el interior, `k` para un tercero si lo necesitaras.
+
+```cpp
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < M; j++) {
+        // aquí puedes usar tanto i como j
+    }
+}
+```
+
+De hecho, puedes usar `i` dentro de la condición del ciclo interior. Eso es exactamente lo que se necesita para imprimir una pirámide (más adelante lo practicarás).
+
+El programa completo del rectángulo:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int N, M;
+
+int main() {
+    cin >> N >> M;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cout << "*";
+        }
+        cout << '\n';
+    }
+    return 0;
+}
+```

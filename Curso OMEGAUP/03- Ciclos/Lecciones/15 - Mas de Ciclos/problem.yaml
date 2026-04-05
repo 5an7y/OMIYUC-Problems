@@ -1,0 +1,14 @@
+alias: CursoOMIYuc15
+title: Mas de Ciclos
+source: OMI Yucatán
+time_limit: 1000
+memory_limit: 256
+overall_wall_time_limit: 60000
+visibility: private
+type: normal
+validator: token
+level: problemLevelBasicIntroductionToProgramming
+languages: cpp17-gcc,cpp20-gcc
+tags:
+  - name: problemTopicInputOutput
+    public: true
