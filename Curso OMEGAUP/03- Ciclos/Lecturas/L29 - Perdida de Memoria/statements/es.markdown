@@ -2,13 +2,15 @@
 
 # ¿Necesitas recordar todo?
 
-Imagina que te dan 5 números y te preguntan: ¿cuántos son menores a 4? Tu primer instinto es guardarlos todos para luego compararlos uno a uno. Pero no hace falta — puedes ir leyendo número a número y llevar la cuenta en el momento. Nunca necesitas tener más de un número en memoria a la vez.
+Imagina que tienes que contar cuántas personas son mayores de edad en un grupo de 20. ¿De verdad necesitas reunirlas a todas en un lugar antes de empezar a contar? No — puedes ir persona por persona, preguntarle su edad, y llevar la cuenta en tu cabeza. Al terminar ya tienes la respuesta, sin haber necesitado tener a las 20 juntas en ningún momento.
 
-A esta clase de problemas les llamamos de **pérdida de memoria**: en cada iteración del ciclo, la variable olvida el valor anterior y solo conoce el valor actual. Muchos problemas que parecen requerir guardar toda la lista se pueden resolver así.
+Con los ciclos pasa lo mismo. A esta clase de problemas les llamamos de **pérdida de memoria**: problemas donde podemos enfocarnos en cada número a la vez, sin necesitar tenerlos a todos "juntos" — es decir, sin guardarlos todos en memoria al mismo tiempo.
 
-# Suma de números
+# Calificaciones de la película
 
-Nos dan $N$ números y debemos imprimir su suma. El truco: una variable `suma` que empieza en `0` y se va acumulando.
+Tus amigos vieron la misma película. Cada quien le dio una calificación del $0$ al $10$. Quieres saber la calificación total del grupo.
+
+No necesitas anotar todas las calificaciones para sumarlas al final — puedes ir preguntando una a una y llevando la suma en el momento. El truco: una variable `suma` que empieza en $0$ y se va acumulando.
 
 ```cpp
 #include <bits/stdc++.h>
@@ -28,7 +30,7 @@ int main() {
 }
 ```
 
-Cada vez que leemos un número, lo sumamos y lo olvidamos. Al final `suma` tiene la respuesta.
+Cada vez que leemos una calificación, la sumamos y la olvidamos. Al final `suma` tiene la respuesta.
 
 # Mínimo de una lista
 

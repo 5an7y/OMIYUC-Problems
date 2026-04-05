@@ -17,12 +17,13 @@ Lecturas y lecciones-problema intercaladas, en orden.
 | 3 | **L28 - Ciclos Controlados** | El `for`: repetir N veces. Variable contadora, localidad de variables. |
 | 4 | **LECCIÓN 12 - Del Cero al N** | Imprimir todos los números de 0 a N-1. |
 | 5 | **L29 - Pérdida de Memoria** | Acumuladores, mínimo/máximo: resolver sin guardar toda la lista. |
-| 6 | **LECCIÓN 13 - El Filtro** | Contar cuántos números de una lista son menores a K. |
-| 7 | **L30 - Ciclos Anidados** | Un ciclo dentro de otro. Rectángulo de asteriscos. Nombres i/j. |
-| 8 | **LECCIÓN 14 - La Pirámide** | Media pirámide de asteriscos: ciclo exterior controla filas, interior usa i. |
-| 9 | **L31 - Más de Ciclos** | El optimizador `ios_base::sync_with_stdio(0); cin.tie(0)`. Plantilla definitiva. |
-| 10 | **LECCIÓN 15 - Sin Signo** | Valor absoluto de N números: salida múltiple con el optimizador. |
-| 11 | **L32 - Atajos de Ciclos** | While sin llaves, for sin llaves, `while(N--)`. Reconocerlos en código ajeno. |
+| 6 | **L30 - N Entradas** | El patrón: leer N primero, luego N datos en un for. Formaliza lo que ya se vio en L29. |
+| 7 | **LECCIÓN 13 - El Filtro** | Contar cuántos números de una lista son menores a K. |
+| 8 | **L31 - Ciclos Anidados** | Un ciclo dentro de otro. Rectángulo de asteriscos. Nombres i/j. |
+| 9 | **LECCIÓN 14 - La Pirámide** | Media pirámide de asteriscos: ciclo exterior controla filas, interior usa i. |
+| 10 | **L32 - Más de Ciclos** | El optimizador `ios_base::sync_with_stdio(0); cin.tie(0)`. Plantilla definitiva. |
+| 11 | **LECCIÓN 15 - Sin Signo** | Valor absoluto de N números: salida múltiple con el optimizador. |
+| 12 | **L33 - Atajos de Ciclos** | While sin llaves, for sin llaves, `while(N--)`. Reconocerlos en código ajeno. |
 
 ---
 
