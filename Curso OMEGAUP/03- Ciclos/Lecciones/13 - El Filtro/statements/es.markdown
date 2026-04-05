@@ -1,38 +1,38 @@
 *Este problema es una* ***lección*** *diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.*
 
-# Problema
+# El filtro de la película
 
-Se te dará una lista de $N$ números y un valor $K$. Deberás responder cuántos números de la lista son menores a $K$.
+Tus $10$ amigos calificaron la película del $0$ al $10$. Quieres saber cuántos le dieron una calificación **menor a** $K$ — es decir, cuántos no quedaron satisfechos con ese umbral.
 
 # Entrada
 
-Dos enteros $N$ y $K$. En la siguiente línea los $N$ números $x_i$ que conforman la lista.
+Un único entero $K$. En la siguiente línea las $10$ calificaciones.
 
 # Salida
 
-Un único entero que representa cuántos números de la lista son menores a $K$.
+Un único entero: cuántas calificaciones son menores a $K$.
 
 # Ejemplos
 
 ||input
-5 4
-1 7 5 3 2
+7
+8 6 9 10 7 5 8 9 6 10
 ||output
 3
 ||description
-Hay $3$ números en la lista que son menores a $4$: el $1$, el $3$ y el $2$.
+Tres calificaciones son menores a $7$: el $6$, el $5$ y el $6$.
 ||input
-3 2
-1 2 3
+10
+8 6 9 10 7 5 8 9 6 10
 ||output
-1
+9
 ||input
-8 5
-9 12 32 11 8 9 100 23
+1
+8 6 9 10 7 5 8 9 6 10
 ||output
 0
 ||end
 
 # Limites
 
-- $0 < N, K, x_i \leq 10^6$
+- $0 \leq K \leq 10$
