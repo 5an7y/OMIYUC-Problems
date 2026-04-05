@@ -43,5 +43,5 @@ En este caso al pokemon $5$ se le vio $3$ veces y a los demás se les vio menos 
 
 # Limites
 
-- $1 \leq N \leq 10^5$.
-- $1 \leq x_i \leq 1000$.
+- $1 \leq N \leq 100$
+- $1 \leq x_i \leq 100$

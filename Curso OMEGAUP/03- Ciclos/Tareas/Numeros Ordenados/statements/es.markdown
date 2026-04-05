@@ -34,5 +34,5 @@ No
 
 # Limites
 
-- $1 \leq N \leq 10^5$.
-- $1 \leq x_i \leq 10^5$.
+- $1 \leq N \leq 100$
+- $1 \leq x_i \leq 100$

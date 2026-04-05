@@ -31,4 +31,4 @@ Imprime todos los divisores del número en orden creciente.
 
 # Limites
 
-- $1 \leq N \leq 10^6$.
+- $1 \leq N \leq 100$

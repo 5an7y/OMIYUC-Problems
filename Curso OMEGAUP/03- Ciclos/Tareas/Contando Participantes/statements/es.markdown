@@ -27,8 +27,8 @@ Un entero representando la cantidad de participantes que cumplen las restriccion
 ||description
 En este caso solo 3 participantes de los 5 que tenemos cumplen tener una edad entre los 12 y 17 años.
 ||input
-3 1 100
-1000 3042 3424
+3 50 80
+20 45 90
 ||output
 0
 ||input
@@ -40,5 +40,6 @@ En este caso solo 3 participantes de los 5 que tenemos cumplen tener una edad en
 
 # Limites
 
-- $1 \leq N, a, b, x_i \leq 10^5$.
-- $a \leq b$.
+- $1 \leq N \leq 100$
+- $1 \leq a \leq b \leq 100$
+- $1 \leq x_i \leq 100$

@@ -32,4 +32,4 @@ Todos los números primos menores o iguales a $N$, en orden creciente, separados
 
 # Limites
 
-- $2 \leq N \leq 10^4$
+- $2 \leq N \leq 100$
