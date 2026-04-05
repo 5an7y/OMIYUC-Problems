@@ -1,6 +1,6 @@
 *Este problema es una* ***lección*** *diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.*
 
-# El más alto de la clase
+# Problema
 
 En la clase de educación física, el maestro midió a $N$ estudiantes. Quiere saber cuánto mide el más alto.
 

@@ -8,7 +8,13 @@ Con los ciclos pasa lo mismo. A esta clase de problemas les llamamos de **pérdi
 
 # Calificaciones de la película
 
-Tus amigos vieron la misma película. Cada quien le dio una calificación del $0$ al $10$. Quieres saber la calificación total del grupo.
+Tus $10$ amigos vieron la misma película. Cada quien le dio una calificación del $0$ al $10$. Quieres saber la calificación total del grupo.
+
+||input
+8 6 9 10 7 5 8 9 6 10
+||output
+78
+||end
 
 No necesitas anotar todas las calificaciones para sumarlas al final — puedes ir preguntando una a una y llevando la suma en el momento. El truco: una variable `suma` que empieza en $0$ y se va acumulando.
 
@@ -16,12 +22,11 @@ No necesitas anotar todas las calificaciones para sumarlas al final — puedes i
 #include <bits/stdc++.h>
 using namespace std;
 
-int N, x, suma;
+int x, suma;
 
 int main() {
-    cin >> N;
     suma = 0;
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < 10; i++) {
         cin >> x;
         suma += x;
     }
@@ -34,19 +39,32 @@ Cada vez que leemos una calificación, la sumamos y la olvidamos. Al final `suma
 
 # Mínimo de una lista
 
-Nos dan $N$ números y queremos el menor. El truco: una variable `menor` que va actualizándose si encontramos algo más pequeño.
+¿Y si en lugar de la suma quisieras saber cuál fue la calificación más baja que alguien le dio a la película?
+
+||input
+8 6 9 10 7 5 8 9 6 10
+||output
+5
+||end
+
+El truco: una variable `menor` que va actualizándose si encontramos algo más pequeño.
 
 ```cpp
-int N, menor, x;
+#include <bits/stdc++.h>
+using namespace std;
 
-cin >> N;
-for (int i = 0; i < N; i++) {
-    cin >> x;
-    if (x < menor || i == 0) {
-        menor = x;
+int x, menor;
+
+int main() {
+    for (int i = 0; i < 10; i++) {
+        cin >> x;
+        if (x < menor || i == 0) {
+            menor = x;
+        }
     }
+    cout << menor;
+    return 0;
 }
-cout << menor;
 ```
 
 La condición `i == 0` es importante: en la primera iteración, `menor` no tiene un valor válido todavía, así que tomamos el primer número como punto de partida. Después de eso, solo actualizamos si encontramos algo más pequeño.
@@ -55,20 +73,33 @@ El mismo patrón funciona para el máximo — solo cambia `<` por `>`.
 
 # Contadores
 
-Otro patrón común: contar cuántos números cumplen una condición.
+¿Y si quisieras saber cuántos de tus $10$ amigos le dieron una calificación perfecta de $10$?
+
+||input
+8 6 9 10 7 5 8 9 6 10
+||output
+2
+||end
+
+Mismo principio: una variable `cuenta` que arranca en $0$ y sube cuando se cumple la condición.
 
 ```cpp
-int N, x, cuenta;
+#include <bits/stdc++.h>
+using namespace std;
 
-cin >> N;
-cuenta = 0;
-for (int i = 0; i < N; i++) {
-    cin >> x;
-    if (x < 4) {
-        cuenta++;
+int x, cuenta;
+
+int main() {
+    cuenta = 0;
+    for (int i = 0; i < 10; i++) {
+        cin >> x;
+        if (x == 10) {
+            cuenta++;
+        }
     }
+    cout << cuenta;
+    return 0;
 }
-cout << cuenta;
 ```
 
 Suma, mínimo, máximo, contador — todos siguen el mismo principio: una variable extra que "recuerda" lo único que importa de los números que ya pasaron.

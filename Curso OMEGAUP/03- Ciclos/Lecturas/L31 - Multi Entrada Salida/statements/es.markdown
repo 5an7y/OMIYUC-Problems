@@ -12,7 +12,7 @@ Le das las duraciones en segundos y él necesita que le imprimas la duración de
 
 ||input
 4
-120 90 200 60
+120 90 200 61
 ||output
 60
 45
@@ -53,7 +53,7 @@ int main() {
 
 ||input
 4
-120 90 200 60
+120 90 200 61
 ||output
 60
 45
@@ -66,4 +66,43 @@ int main() {
 150
 ||end
 
-Cada vez que se lee un dato, se procesa y se imprime de inmediato. No hay que esperar a leer todos los datos para empezar a imprimir.
+# Espacios y saltos de línea
+
+En OmegaUp, salvo que el problema lo indique, separar las respuestas con saltos de línea (`'\n'`) o con espacios es equivalente. El juez acepta ambas formas.
+
+Es decir, esta salida:
+
+```
+60 45 100 30
+```
+
+es lo mismo que esta:
+
+```
+60
+45
+100
+30
+```
+
+Por eso en estos problemas puedes usar `'\n'` o `' '` sin preocuparte.
+
+# Probando en tu terminal (Editores de online-cpp o codeblocks)
+
+Cuando corres el programa en tu terminal y escribes los datos uno por uno dando Enter después de cada uno, vas a ver algo raro: la entrada y la salida se mezclan en la pantalla.
+
+```
+4
+120
+60
+90
+45
+200
+100
+61
+30
+```
+
+Eso es normal — el programa imprime cada respuesta en cuanto la calcula, antes de que termines de dar toda la entrada. No hay nada malo en el código.
+
+OmegaUp no "ve" esa mezcla. Él solo evalúa lo que tu programa imprimió como salida, sin importar cómo se vea en pantalla mientras corría.

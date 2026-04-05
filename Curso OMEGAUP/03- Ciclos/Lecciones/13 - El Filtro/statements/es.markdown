@@ -1,6 +1,6 @@
 *Este problema es una* ***lección*** *diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.*
 
-# El filtro de la película
+# Problema
 
 Tus $10$ amigos calificaron la película del $0$ al $10$. Quieres saber cuántos le dieron una calificación **menor a** $K$ — es decir, cuántos no quedaron satisfechos con ese umbral.
 

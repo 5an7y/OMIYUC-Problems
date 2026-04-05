@@ -2,9 +2,31 @@
 
 # Entrada de tamaño variable
 
-Hasta ahora todos los problemas tenían una cantidad fija de datos de entrada — leías exactamente lo que el enunciado decía. Pero en la mayoría de los problemas reales la cantidad de datos varía: primero te dicen cuántos vienen, y luego te los dan.
+Hasta ahora todos los problemas tenían una cantidad fija de datos — leías exactamente lo que el enunciado decía. Pero en la mayoría de los problemas reales la cantidad varía: primero te dicen cuántos datos vienen, y luego te los dan.
 
-El patrón es siempre el mismo: leer `N`, luego leer `N` cosas dentro de un `for`.
+# Calificaciones de la película — N amigos
+
+Mismo problema de antes: tienes un grupo de amigos que calificaron una película del $0$ al $10$ y quieres saber la calificación total. Pero ahora no son exactamente $10$ amigos — son $N$. En un caso pueden ser $3$, en otro $20$, en otro solo $1$.
+
+La entrada tiene dos líneas: primero $N$, luego las $N$ calificaciones $c_1, c_2, \ldots, c_N$.
+
+||input
+3
+8 6 9
+||output
+23
+||end
+
+||input
+5
+10 10 10 10 10
+||output
+50
+||end
+
+# Leer N números con un for
+
+El patrón es siempre el mismo: leer `N`, luego leer `N` valores dentro de un `for`.
 
 ```cpp
 int N, x;
@@ -15,30 +37,26 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-# Ejemplo
+# Solución
 
-Te dan $N$ números. Imprime cada uno multiplicado por $2$.
+Es exactamente el mismo código de la lectura anterior, solo que en lugar del `10` fijo usas `N`.
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int N, x;
+int N, x, suma;
 
 int main() {
     cin >> N;
+    suma = 0;
     for (int i = 0; i < N; i++) {
         cin >> x;
-        cout << x * 2 << '\n';
+        suma += x;
     }
+    cout << suma;
     return 0;
 }
 ```
 
-Para la entrada `3` / `5 8 1`, el programa lee $N = 3$, luego en cada vuelta del ciclo lee un número e imprime su doble: `10`, `16`, `2`.
-
-# Lo que ya usaste sin saberlo
-
-En la lectura anterior (Pérdida de Memoria) ya usaste este patrón — era la forma de leer las calificaciones, los números para el mínimo, etc. Ahora tiene nombre y forma explícita.
-
-De aquí en adelante, cada vez que un problema diga "te doy $N$ seguido de $N$ números", ya sabes exactamente cómo leerlos.
+De aquí en adelante, cuando un problema diga "te doy $N$ seguido de $N$ números", ya sabes exactamente cómo leerlos.

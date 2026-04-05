@@ -1,14 +1,14 @@
 *Este problema es una* ***lección*** *diseñada para el curso de la OMI Yucatán. El curso tiene como propósito enseñar los principios básicos de programación competitiva en C++.*
 
-# El árbitro distraído
+# Problema
 
-El árbitro de la liga de fútbol anota la diferencia de goles de cada partido: positiva si ganó el equipo local, negativa si perdió. Al final del torneo necesita reportar cuántos goles "se movieron" en cada partido — sin importar quién ganó, solo la magnitud.
+En clase de ciencias, el maestro llenó un frasco con canicas y los $N$ alumnos intentaron adivinar cuántas había. El maestro anotó la diferencia entre cada intento y el número real: positiva si el alumno se pasó, negativa si se quedó corto.
 
-Dado el registro de $N$ partidos, imprime el valor absoluto de cada diferencia.
+Para el podio solo importa qué tan lejos estuvo cada quien — sin importar si se pasó o no llegó. Imprime el valor absoluto de cada diferencia.
 
 # Entrada
 
-Un entero $N$. En la siguiente línea las $N$ diferencias de goles (pueden ser negativas).
+Un entero $N$. En la siguiente línea las $N$ diferencias.
 
 # Salida
 
@@ -42,4 +42,4 @@ El valor absoluto de cada diferencia, uno por línea, en el mismo orden.
 # Limites
 
 - $0 < N \leq 100$
-- $|x_i| \leq 100$
+- $-100 \leq x_i \leq 100$
