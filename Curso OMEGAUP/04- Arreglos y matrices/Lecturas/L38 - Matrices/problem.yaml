@@ -1,0 +1,10 @@
+alias: CursoOMIYucL38
+title: Matrices
+source: OMI Yucatán
+time_limit: 1000
+memory_limit: 256
+overall_wall_time_limit: 60000
+visibility: private
+type: lectura
+validator: token
+level: problemLevelBasicIntroductionToProgramming
