@@ -34,8 +34,8 @@ Problemas independientes, en orden de dificultad creciente (tipo cognitivo 1→4
 | # | Elemento | Alias | Tipo | Descripción |
 |---|----------|-------|------|-------------|
 | 1 | **Pares e impares** | T19 | Tipo 1 | Dado N números, separar pares/impares en dos líneas. Transferencia directa de L36. |
-| 2 | **La liga de campeones** | T21 | Tipo 2 | Encontrar el máximo y separar clasificados/eliminados en dos líneas. Patrón dos pasadas. |
-| 3 | **El maestro estricto** | T22 | Tipo 2-3 | Dos arreglos paralelos (puntos + tardanza). Modificar puntos si tardanza > 30. Arreglos mutables + ligar información. |
-| 4 | **Folios duplicados** | T23 | Tipo 3 | Imprimir folios que aparecen más de una vez, en orden de primera aparición. O(N²). |
-| 5 | **Girando en círculo** | T20 | Tipo 3 | Rotar arreglo K posiciones a la derecha. Reorganizar un arreglo. |
+| 2 | **La liga de campeones** | T20 | Tipo 2 | Encontrar el máximo y separar clasificados/eliminados en dos líneas. Patrón dos pasadas. |
+| 3 | **El maestro estricto** | T21 | Tipo 2-3 | Dos arreglos paralelos (puntos + tardanza). Modificar puntos si tardanza > 30. Arreglos mutables + ligar información. |
+| 4 | **Folios duplicados** | T22 | Tipo 3 | Imprimir folios que aparecen más de una vez, en orden de primera aparición. O(N²). |
+| 5 | **Girando en círculo** | T23 | Tipo 3 | Rotar arreglo K posiciones a la derecha. Reorganizar un arreglo. |
 | 6 | **Las dos rondas** | T24 | Tipo 4 | Dos arreglos de entrada, calcular promedio individual, filtrar sobre el promedio del grupo. El más completo del módulo. |
