@@ -42,16 +42,12 @@ Los boletos con valor especial 9 son: 10, 11, 12, 13, 14, 15, 16, 17, 18, 19.
 90
 ||output
 0
-||input
-999999999
-||output
-10
 ||end
 
 # Limites
 
-- $1 \leq X < 10^9$
+- $1 \leq X < 10^{15}$
 
 **Para un 50% de los casos**
 
-- $X < 100$
+- $X < 10000$
