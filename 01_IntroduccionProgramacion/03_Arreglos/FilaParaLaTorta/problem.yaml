@@ -1,0 +1,14 @@
+alias: fila-para-la-torta
+title: Fila Para La Torta
+source: Adaptado de Codeforces 2200B
+time_limit: 1000
+memory_limit: 256
+overall_wall_time_limit: 60000
+visibility: private
+type: normal
+validator: token
+level: problemLevelBasicIntroductionToProgramming
+languages: cpp17-gcc,cpp20-gcc
+tags:
+- name: problemTagBruteForce
+  public: true
