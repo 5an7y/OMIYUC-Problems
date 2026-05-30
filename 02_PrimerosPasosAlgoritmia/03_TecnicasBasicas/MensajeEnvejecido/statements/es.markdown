@@ -61,4 +61,4 @@ NO
 
 **Para un 50% de los casos**
 
-- $1 \leq N \leq 20$
+- $X$ no contiene ningún `?` (todas las letras se leen, solo `a` y `b`).
