@@ -1,20 +1,24 @@
 # Historia
 
-En un **torneo de videojuegos**, $N$ jugadores se sentaron uno detrás del otro a esperar su turno. Cada jugador tiene un número de **rating** $a_i$ (puede ser positivo, negativo o cero).
+En un **torneo de videojuegos**, $N$ jugadores llegaron uno por uno y se sentaron en el orden en que fueron llegando. Cada jugador tiene un número de **rating** $a_i$ (puede ser positivo, negativo o cero).
 
-El **director** del torneo va a armar equipos. Antes de cada ronda, elige un número entero $K$ (el llamado **rating ideal** de la ronda). Una vez fijado $K$, dice:
+El torneo se desarrolla de la siguiente forma: el jugador $j$ se enfrenta a **todos los jugadores que llegaron después de él**, es decir, a todos los jugadores $i$ con $i > j$.
 
-> Un jugador $j$ es **más fácil** que un jugador $i$ si su rating está **más cerca** de $K$, es decir, si $|a_j - K| < |a_i - K|$.
+Antes de jugar, el jugador $j$ **elige un mapa** con dificultad $K$ ($K$ puede ser cualquier número entero, incluso negativo).
 
-Para cada jugador $i$ de la fila, el director quiere armar el **lote más grande posible** de "rivales más fáciles" eligiendo solamente entre los jugadores que están **detrás** de $i$ (índice $j > i$). Puede elegir el valor de $K$ libremente para cada jugador (es decir, optimiza $K$ por separado para cada $i$).
+Los jugadores saben que la dificultad del mapa es muy importante: **mientras más cercano sea tu rating a la dificultad $K$, mejor juegas ese mapa**. En particular, el jugador $j$ **le gana** al jugador $i$ en un mapa de dificultad $K$ si su rating está más cerca de $K$ que el de $i$, es decir, si
+
+$$|a_j - K| < |a_i - K|$$
+
+Si las dos distancias son iguales, la partida queda en **empate** (no cuenta como victoria para nadie).
 
 # Problema
 
-Para cada jugador $i$, calcula el tamaño máximo del lote de rivales más fáciles que el director puede armar, considerando **todos los valores enteros posibles** de $K$.
+Para cada jugador $j$, calcula la **máxima cantidad de partidas que puede ganar** si elige la dificultad $K$ de la forma más conveniente para él. Recuerda que el jugador $j$ solo se enfrenta a los jugadores que llegaron después de él.
 
-Formalmente, para cada $i$ debes calcular:
+Formalmente, para cada $j$ debes calcular:
 
-$$\max_{K \in \mathbb{Z}} \; \big| \, \{ j : j > i \text{ y } |a_j - K| < |a_i - K| \} \, \big|$$
+$$\max_{K \in \mathbb{Z}} \; \big| \, \{ i : i > j \text{ y } |a_j - K| < |a_i - K| \} \, \big|$$
 
 # Entrada
 
@@ -24,7 +28,7 @@ En la segunda línea, $N$ enteros $a_1, a_2, \ldots, a_N$ separados por espacios
 
 # Salida
 
-En una sola línea, $N$ enteros separados por espacios: el tamaño máximo del lote para cada jugador, en orden de $1$ a $N$.
+En una sola línea, $N$ enteros separados por espacios: la máxima cantidad de partidas que puede ganar cada jugador, en orden de $1$ a $N$.
 
 # Ejemplos
 
@@ -34,21 +38,21 @@ En una sola línea, $N$ enteros separados por espacios: el tamaño máximo del l
 ||output
 0
 ||description
-Solo hay un jugador, así que no hay nadie a quien comparar.
+Solo hay un jugador, así que no hay nadie con quien enfrentarse.
 ||input
 2
 105 -105
 ||output
 1 0
 ||description
-Para el jugador $1$ con rating $105$: el director puede elegir $K = -105$, entonces $|105 - (-105)| = 210$ y $|(-105) - (-105)| = 0$. El jugador $2$ está más cerca de $K$, así que el lote tiene tamaño $1$. Para el jugador $2$ no hay nadie detrás.
+Para el jugador $1$ con rating $105$: si elige $K = 105$, entonces $|105 - 105| = 0$ y $|(-105) - 105| = 210$. Su rating está más cerca de $K$ que el del jugador $2$, así que le gana. Total: $1$ victoria. Para el jugador $2$ no hay nadie a quien enfrentarse.
 ||input
 5
 1 2 93 84 2
 ||output
 4 2 2 1 0
 ||description
-Para el jugador $1$ con rating $1$: si el director elige $K = 1000000000$, los $4$ jugadores posteriores tienen ratings $2, 93, 84, 2$, todos más cercanos a $K$ que el rating $1$. Lote de tamaño $4$.
+Para el jugador $1$ con rating $1$: si elige $K = 1$, su distancia a $K$ es $0$, mientras que los $4$ jugadores posteriores tienen distancias $1, 92, 83$ y $1$. Todas son mayores que $0$, así que les gana a los $4$.
 ||end
 
 # Limites
