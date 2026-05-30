@@ -2,7 +2,9 @@
 
 En un **torneo de videojuegos**, $N$ jugadores llegaron uno por uno y se sentaron en el orden en que fueron llegando. Cada jugador tiene un número de **miedo** $a_i$ (puede ser positivo, negativo o cero) que mide cuánto le asusta cierto tipo de monstruo.
 
-El torneo se desarrolla en **partidas**. En cada partida, el jugador $i$ se enfrenta con todos los jugadores $j$ que llegaron después de él (es decir, todos los $j > i$). Antes de empezar la partida, alguien elige un **tipo de monstruo** $K$ ($K$ puede ser cualquier número entero, incluso negativo).
+El torneo se desarrolla **por rondas**. La **ronda de $i$** consiste en que el jugador $i$ se enfrenta, una por una, contra **todos los jugadores que llegaron después de él** (es decir, contra todos los $j > i$).
+
+Al comienzo de la ronda de $i$, alguien elige un **único tipo de monstruo** $K$ ($K$ puede ser cualquier número entero, incluso negativo) y **ese mismo $K$ se usa en TODAS las partidas de esa ronda** (contra cada uno de los $j > i$).
 
 La **valentía** de un jugador con miedo $a$ frente a un monstruo de tipo $K$ se define como
 
@@ -16,7 +18,7 @@ Si dos jugadores tienen exactamente la misma valentía, hay empate (no cuenta co
 
 # Problema
 
-Para cada jugador $i$, considera todas las partidas que jugará contra los jugadores $j > i$. Si tú pudieras escoger el tipo de monstruo $K$ de la forma más conveniente, **¿cuántos jugadores posteriores podrían ganarle a $i$** (es decir, tener mayor valentía que él)?
+Para cada jugador $i$, considera **su ronda** (las partidas contra todos los $j > i$, usando un único $K$ para toda la ronda). Si tú pudieras escoger el tipo de monstruo $K$ de la forma más conveniente para esa ronda, **¿cuántos jugadores posteriores podrían ganarle a $i$** (es decir, tener mayor valentía que él)?
 
 Formalmente, para cada $i$ debes calcular:
 
