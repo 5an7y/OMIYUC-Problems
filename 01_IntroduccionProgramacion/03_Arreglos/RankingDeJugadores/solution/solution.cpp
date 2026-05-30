@@ -11,8 +11,9 @@ int main() {
     for (int i = 0; i < n; i++) cin >> a[i];
 
     for (int i = 0; i < n; i++) {
-        // Cuenta cuantos j > i tienen a_j < a_i y cuantos tienen a_j > a_i.
-        // La alianza maxima es el mayor de los dos grupos.
+        // Insight: al hacer K muy grande, los a_j > a_i quedan mas cerca de K;
+        // al hacer K muy chico, los a_j < a_i quedan mas cerca. Los a_j == a_i
+        // nunca cuentan. La respuesta es max(#menores, #mayores).
         int menores = 0, mayores = 0;
         for (int j = i + 1; j < n; j++) {
             if (a[j] < a[i]) menores++;

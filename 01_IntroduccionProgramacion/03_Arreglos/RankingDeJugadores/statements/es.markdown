@@ -1,16 +1,20 @@
 # Historia
 
-En un **torneo de videojuegos**, $N$ jugadores se sentaron uno detrás del otro a esperar su turno. Cada jugador tiene un número de **rating** $a_i$ que mide su habilidad (puede ser positivo, negativo o cero).
+En un **torneo de videojuegos**, $N$ jugadores se sentaron uno detrás del otro a esperar su turno. Cada jugador tiene un número de **rating** $a_i$ (puede ser positivo, negativo o cero).
 
-Antes de empezar el torneo, cada jugador quiere armar la **alianza** más grande posible con los jugadores que están **detrás** suyo en la fila (es decir, con índice mayor). La regla de las alianzas es:
+El **director** del torneo va a armar equipos. Antes de cada ronda, elige un número entero $K$ (el llamado **rating ideal** de la ronda). Una vez fijado $K$, dice:
 
-> Una alianza es válida si **todos sus miembros** tienen rating estrictamente **MAYOR** que el jugador que la arma, **o** todos sus miembros tienen rating estrictamente **MENOR** que él. No se pueden mezclar.
+> Un jugador $j$ es **más fácil** que un jugador $i$ si su rating está **más cerca** de $K$, es decir, si $|a_j - K| < |a_i - K|$.
 
-(Los jugadores con el mismo rating no pueden formar parte de la alianza.)
+Para cada jugador $i$ de la fila, el director quiere armar el **lote más grande posible** de "rivales más fáciles" eligiendo solamente entre los jugadores que están **detrás** de $i$ (índice $j > i$). Puede elegir el valor de $K$ libremente para cada jugador (es decir, optimiza $K$ por separado para cada $i$).
 
 # Problema
 
-Para cada jugador $i$, calcula el **tamaño máximo** de la alianza que puede armar entre los jugadores que están detrás suyo en la fila (índices $j > i$).
+Para cada jugador $i$, calcula el tamaño máximo del lote de rivales más fáciles que el director puede armar, considerando **todos los valores enteros posibles** de $K$.
+
+Formalmente, para cada $i$ debes calcular:
+
+$$\max_{K \in \mathbb{Z}} \; \big| \, \{ j : j > i \text{ y } |a_j - K| < |a_i - K| \} \, \big|$$
 
 # Entrada
 
@@ -20,7 +24,7 @@ En la segunda línea, $N$ enteros $a_1, a_2, \ldots, a_N$ separados por espacios
 
 # Salida
 
-En una sola línea, $N$ enteros separados por espacios: el tamaño máximo de la alianza para cada jugador, en orden de $1$ a $N$.
+En una sola línea, $N$ enteros separados por espacios: el tamaño máximo del lote para cada jugador, en orden de $1$ a $N$.
 
 # Ejemplos
 
@@ -30,21 +34,21 @@ En una sola línea, $N$ enteros separados por espacios: el tamaño máximo de la
 ||output
 0
 ||description
-Solo hay un jugador; nadie está detrás, así que su alianza tiene tamaño $0$.
+Solo hay un jugador, así que no hay nadie a quien comparar.
 ||input
 2
 105 -105
 ||output
 1 0
 ||description
-El jugador $1$ tiene a su derecha al jugador $2$ con rating menor → alianza de tamaño $1$. El jugador $2$ no tiene a nadie detrás.
+Para el jugador $1$ con rating $105$: el director puede elegir $K = -105$, entonces $|105 - (-105)| = 210$ y $|(-105) - (-105)| = 0$. El jugador $2$ está más cerca de $K$, así que el lote tiene tamaño $1$. Para el jugador $2$ no hay nadie detrás.
 ||input
 5
 1 2 93 84 2
 ||output
 4 2 2 1 0
 ||description
-Para el jugador $1$ ($a_1 = 1$): los 4 jugadores detrás tienen rating mayor → alianza de tamaño $4$. Para el jugador $3$ ($a_3 = 93$): a su derecha hay $84$ y $2$, ambos menores → alianza de tamaño $2$.
+Para el jugador $1$ con rating $1$: si el director elige $K = 1000000000$, los $4$ jugadores posteriores tienen ratings $2, 93, 84, 2$, todos más cercanos a $K$ que el rating $1$. Lote de tamaño $4$.
 ||end
 
 # Limites
