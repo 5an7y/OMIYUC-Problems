@@ -68,5 +68,5 @@ Los dígitos $3$ y $5$ son primos por separado. Pero $35 = 5 \times 7$ es compue
 
 **Para un 50% de los casos**
 
-- $1 \leq K \leq 5$
+- $1 \leq K \leq 50$
 - Si $K \geq 2$, el **último dígito** del número del panel es siempre un $5$.
