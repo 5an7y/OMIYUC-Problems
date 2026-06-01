@@ -11,6 +11,15 @@ Antes de cada movimiento:
 
 En cada segundo (incluyendo el segundo $0$, **antes** del primer movimiento), el robot **limpia toda la fila y toda la columna** donde está parado. Solamente hay una celda sucia en la sala, ubicada en $(r_d, c_d)$.
 
+A continuación se muestra cómo se va moviendo un robot durante los segundos $0$ a $5$ dentro de una sala de $8 \times 8$. Las **cuadrículas amarillas** son las que el robot limpia en ese segundo.
+
+![](T0.png)
+![](T1.png)
+![](T2.png)
+![](T3.png)
+![](T4.png)
+![](T5.png)
+
 # Problema
 
 Calcula en qué **segundo** la celda sucia es limpiada por primera vez.
