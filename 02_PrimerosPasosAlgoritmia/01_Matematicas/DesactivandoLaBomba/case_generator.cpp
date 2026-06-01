@@ -29,18 +29,32 @@ int main(int argc, char *argv[]) {
     // tipo 1: un solo digito no primo  (K = 1 sirve aqui)
     // tipo 2: solo digitos primos {2,3,5,7} (forzar respuesta = 2)
     // tipo 3: cualquier digito 1-9 (mezcla natural)
-    std::string pool;
-    if (tipo == 1) pool = "146789";
-    else if (tipo == 2) pool = "2357";
-    else pool = "123456789";
-
+    // tipo 4: primer digito en {2,3,5,7}, resto solo 3s y 7s (requiere K >= 2)
+    // tipo 5: cualquier digito 1-9 en los primeros K-1, ultimo = 5 (requiere K >= 2)
     std::string s;
-    do {
-        s.clear();
-        for (int i = 0; i < k; i++) {
-            s += pool[Random::rnd<int>(0, (int)pool.size() - 1)];
+    if (tipo == 4) {
+        const std::string primer = "2357";
+        s += primer[Random::rnd<int>(0, 3)];
+        for (int i = 1; i < k; i++) {
+            s += (Random::rnd<int>(0, 1) == 0) ? '3' : '7';
         }
-    } while (!tieneSolucion(s));
+    } else if (tipo == 5) {
+        for (int i = 0; i < k - 1; i++) {
+            s += (char)('1' + Random::rnd<int>(0, 8));
+        }
+        s += '5';
+    } else {
+        std::string pool;
+        if (tipo == 1) pool = "146789";
+        else if (tipo == 2) pool = "2357";
+        else pool = "123456789";
+        do {
+            s.clear();
+            for (int i = 0; i < k; i++) {
+                s += pool[Random::rnd<int>(0, (int)pool.size() - 1)];
+            }
+        } while (!tieneSolucion(s));
+    }
 
     Generator::case_in << k << "\n" << s << "\n";
     return 0;
