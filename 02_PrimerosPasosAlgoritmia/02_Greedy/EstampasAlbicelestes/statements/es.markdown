@@ -32,7 +32,7 @@ Una línea con dos enteros $N$ y $K$.
 
 # Salida
 
-Si existe una fila válida, imprime "YES" en la primera línea y luego los $2N$ valores $a_1, a_2, \ldots, a_{2N}$ en la segunda línea, separados por espacios.
+Si existe una fila válida, imprime "SI" en la primera línea y luego los $2N$ valores $a_1, a_2, \ldots, a_{2N}$ en la segunda línea, separados por espacios.
 
 Si no, imprime "NO" en una única línea.
 
@@ -43,7 +43,7 @@ Si hay varias filas válidas, imprime cualquiera.
 ||input
 2 3
 ||output
-YES
+SI
 2 1 2 1
 ||description
 $N = 2$, $K = 3$. Una fila válida es $[2, 1, 2, 1]$.
@@ -56,7 +56,7 @@ $N = 2$, $K = 3$. Una fila válida es $[2, 1, 2, 1]$.
 ||input
 3 4
 ||output
-YES
+SI
 1 3 2 2 1 3
 ||end
 
@@ -69,7 +69,7 @@ NO
 ||input
 6 10
 ||output
-YES
+SI
 2 1 3 4 5 4 1 2 6 5 6 3
 ||end
 

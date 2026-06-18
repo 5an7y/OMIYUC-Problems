@@ -77,7 +77,7 @@ int main() {
         if (achievable) wa();
         ac();
     }
-    if (resp != "YES") wa();
+    if (resp != "SI" && resp != "SÍ") wa();
     if (!achievable) wa();
 
     vector<int> a(2 * n);

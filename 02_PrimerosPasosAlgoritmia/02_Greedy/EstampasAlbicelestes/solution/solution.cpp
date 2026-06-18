@@ -20,7 +20,7 @@ int main() {
     // juntas: x+1, x+1, ..., n, n. Total: (2x-1) + (n-x) = k.
     int x = k - n + 1;
 
-    cout << "YES\n";
+    cout << "SI\n";
     vector<int> ans;
     if (x == 1) {
         ans = {1, 1};
