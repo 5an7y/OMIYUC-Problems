@@ -26,9 +26,9 @@ Si numeramos $1, 2, 3, \ldots$ a **todos** los episodios que ella va viendo en o
 
 La primera línea contiene dos enteros $N$ y $K$.
 
-Las siguientes $N$ líneas describen las series. La línea $i$-ésima (de esas) empieza con $L_i$, seguido de los $L_i$ identificadores $A_{i,1}, A_{i,2}, \ldots, A_{i,L_i}$.
+La segunda línea contiene $N$ enteros $C_1, C_2, \ldots, C_N$.
 
-La última línea contiene $N$ enteros $C_1, C_2, \ldots, C_N$.
+Las siguientes $N$ líneas describen las series. La línea $i$-ésima (de esas) empieza con $L_i$, seguido de los $L_i$ identificadores $A_{i,1}, A_{i,2}, \ldots, A_{i,L_i}$.
 
 # Salida
 
@@ -38,10 +38,10 @@ Imprime un solo entero: el identificador del episodio número $K$.
 
 ||input
 3 9
+1 3 2
 3 1 3 2
 1 3
 2 4 3
-1 3 2
 ||output
 4
 ||description
@@ -50,10 +50,10 @@ Las tres series son: serie 1 con episodios $[1, 3, 2]$, serie 2 con $[3]$, serie
 
 ||input
 3 1
+1 100 10000
 1 7
 1 111
 1 5
-1 100 10000
 ||output
 7
 ||description
@@ -62,10 +62,10 @@ El primer episodio que Esperanza ve es el único episodio de la serie 1, que tie
 
 ||input
 3 3163812
+87043 908415 9814
 5 1 2 3 4 5
 4 9 8 7 6
 2 10 11
-87043 908415 9814
 ||output
 9
 ||end

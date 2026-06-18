@@ -68,13 +68,13 @@ int main(int argc, char *argv[]) {
 
     Generator::case_in << n << " " << k << "\n";
     for (int i = 0; i < n; i++) {
+        Generator::case_in << C[i];
+        Generator::case_in << (i + 1 == n ? '\n' : ' ');
+    }
+    for (int i = 0; i < n; i++) {
         Generator::case_in << L[i];
         for (int j = 0; j < L[i]; j++) Generator::case_in << " " << A[i][j];
         Generator::case_in << "\n";
-    }
-    for (int i = 0; i < n; i++) {
-        Generator::case_in << C[i];
-        Generator::case_in << (i + 1 == n ? '\n' : ' ');
     }
 
     return 0;
